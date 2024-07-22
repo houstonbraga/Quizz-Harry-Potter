@@ -5,6 +5,11 @@
     src: url(fonts/HARRYP__.TTF);
 }
 
+@font-face {
+    font-family: 'Alisson';
+    src: url(fonts/Allison-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +18,14 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-image: url(src/background.jpg);
     padding-top: 30px;
     font-family: 'Harry potter';
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -24,13 +33,88 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+
+#footer {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    
+}
+
+#footer p {
+    color: rgba(255, 255, 255, 0.705);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 main h1 {
     color: white;
+    font-size: 44px;
     text-shadow: 2px 2px black;
 }
 
 .img-logo {
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.562));
 }
+
+.conjunto-niveis {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.nivel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-div {
+    width: 120px;
+    height: 120px;
+    background-color: #d9d9d90a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.nivel-div .background-nivel {
+    opacity: 50%;
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.nivel-div .background-nivel:hover {
+    transform: scale(1.5);
+    opacity: 10%;
+}
+
+.nivel h2 {
+    color: #D4B76C;
+    transition: 0.3s ease-in-out;
+}
+
+span {
+    font-family: 'Alisson';
+    font-size: 24px;
+}
+
+.varinha {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 20px;
+    display: none;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
